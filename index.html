@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta description="Portfolio for me, I need to have a job.">
+    <title>Personal portfolio, Mikolaj</title>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__text">
+            {<br>
+            document.write("Hello, I'm Mikolaj");<br>
+            ... // I also need to find a job.<br>
+            }<br>
+        </h1>
+    </header>
+    <main class="main">
+        <div class="box">
+            <a href="files/MY CV.pdf" target="_blank" class="box__item box__item--bottom">here is my CV</a>
+            <p class="box__item box__item--center"> &ltbutton name="do__not do__not--click" onClick="showWork"></p>
+            <p class="box__item box__item--top">the magic text</p>
+        </div>
+        <div class="about">
+            <div class="about__close">close this</div>
+            <div class="about__img">
+                <img class="about__imgsource" src="images/me.jpg">
+            </div>
+            <div class="about__text"><h3>Mikolaj here.</h3> I am 21 years old and I would love to work through my passion. I love to create, edit and create interfaces.I am always looking for better design everywhere.
+                <br><br>Ouh, almost forgot. I study in Politechnika Krakowska on 2nd year - only on
+                weekends.
+                I am available for 5 days in week.<br><br>I work with Photoshop, XD and learning HTML, CSS, Javascript,
+                C++ and C.</div>
+        </div>
+        <div class="pages">
+            <div class="pages__close">close me</div>
+            <div class="pages__box">
+                <div class="pages__item">
+                    <div class="pages__title">Fizjoterapia i masaż, salon</div>
+                    <a class="pages__img">
+                        <img class="pages__imagesource" src="images/logo_aneta.png">
+                    </a>
+                    <div class="pages__description">Strona dla fizjoterapeutki, która prowadzi salon. Obsługa responsywności oraz praktycznie czysty CSS oraz HTML. Bardzo lekka.</div>
+                </div>
+                <div class="pages__item">
+                    <div class="pages__title">artStone</div>
+                    <div class="pages__img"></div>
+                    <div class="pages__description">Firma, która zajmuje się obrabianiem granitu. Przygotowuje i stawia nagrobki.</div>
+                </div>
+                <div class="pages__item">
+                    <div class="pages__title">To be Annouced</div>
+                    <div class="pages__img"></div>
+                    <div class="pages__description">Waiting for new opportunity.</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer></footer>
+
+
+    <script>
+    document.getElementsByClassName("box__item--top")[0].addEventListener("click", function () {
+            document.getElementsByClassName("about")[0].style.right = "0";
+        });
+
+        document.getElementsByClassName("about__close")[0].addEventListener("click", function () {
+            document.getElementsByClassName("about")[0].style.right = "-20vw";
+        })
+
+        document.getElementsByClassName("box__item--center")[0].addEventListener("click", function () {
+            document.getElementsByClassName("pages")[0].style.bottom = "0";
+        })
+
+        document.getElementsByClassName("pages__close")[0].addEventListener("click", function () {
+            document.getElementsByClassName("pages")[0].style.bottom = "-75vh";
+        })</script>
+
+</body>
+
+
+
+
+
+</html>
