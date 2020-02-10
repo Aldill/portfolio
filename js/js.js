@@ -1,25 +1,44 @@
-function show(elem, parent, _co, amount){
-    document.getElementsByClassName(elem)[0].addEventListener("click", function () {
-        document.getElementsByClassName(parent)[0].style._co = amount;
+document.addEventListener('DOMContentLoaded', () => {
+  writeHeader();
+}, false);
 
-    });
+const text = [
+  "<div class=\"header__text>\"",
+  "\"Hello, Mikołaj here.\"",
+  "... // I need to find a job.",
+  "</div>"
+];
+const headerElement = document.querySelector(".header__text");
+let position = 0, i = 0;
+const writeHeader = () => {
+  if (i < text.length) {
+    if (position < text[i].length) {
+      headerElement.innerHTML += text[i].charAt(position);
+      position++;
+      setTimeout(writeHeader, 150);
+    }
+    else {
+      position = 0;
+      i++;
+      headerElement.innerHTML += "<br>";
+      setTimeout(writeHeader, 150);
+    }
+  }
+};
+
+
+const aboutClick = () => {
+  document.querySelector(".about").classList.toggle("about--show");
 }
 
+const pagesClick = () => {
+  document.querySelector('.pages').classList.toggle('pages--show');
+}
 
-/*
-// click to show more about me
-        document.getElementsByClassName("box__item--top")[0].addEventListener("click", function () {
-            document.getElementsByClassName("about")[0].style.right = "0";
-        });
+[document.querySelector('.box__button--center'), document.querySelector('.pages__close')].forEach(button => {
+  button.addEventListener("click", pagesClick);
+});
 
-        document.getElementsByClassName("about__close")[0].addEventListener("click", function () {
-            document.getElementsByClassName("about")[0].style.right = "-20vw";
-        })
-
-        document.getElementsByClassName("box__item--center")[0].addEventListener("click", function () {
-            document.getElementsByClassName("pages")[0].style.bottom = "0";
-        })
-
-        document.getElementsByClassName("pages__close")[0].addEventListener("click", function () {
-            document.getElementsByClassName("pages")[0].style.bottom = "-75vh";
-        })*/
+[document.querySelector('.box__button--top'), document.querySelector('.about__close')].forEach(button => {
+  button.addEventListener("click", aboutClick);
+});

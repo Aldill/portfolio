@@ -11,82 +11,61 @@
 
 <body>
     <header class="header">
-        <h1 class="header__text">
-            {<br>
-            document.write("Hello, I'm Mikolaj");<br>
-            ... // I also need to find a job.<br>
-            }<br>
-        </h1>
+        <h1 class="header__text"></h1>
     </header>
-    <main class="main">
+    <main>
         <div class="box">
-            <a href="files/CV.pdf" target="_blank" class="box__item box__item--bottom">here is my CV</a>
-            <p class="box__item box__item--center"> &ltbutton name="do__not do__not--click" onClick="showWork"></p>
-            <p class="box__item box__item--top">the magic text</p>
+            <a href="files/CV.pdf" target="_blank" class="box__button box__button--bottom">here is my CV</a>
+            <button class="box__button box__button--center"> &ltbutton name="do__not do__not--click"</button>
+            <button class="box__button box__button--top">the magic text</button>
         </div>
         <div class="about">
-            <div class="about__close">close this</div>
+            <button class="about__close">close this</button>
             <div class="about__img">
                 <img class="about__imgsource" src="images/me.jpg">
             </div>
-            <div class="about__text">  <h3>Mikolaj here.</h3>I am 21 years old student of IT with a head full of ideas. I create ramarkable interfaces with passion and I always look for better design, no matter what am I looking at. In the future I would love to work as frond-end developer.
-                <br><br>I study in Politechnika Krakowska on 2nd year - only on
-                weekends.  
-            <br><br>I work with Photoshop, XD and learning HTML, CSS, Javascript,
-                C++ and C.</div>
-                
-    
+            <div class="about__text">
+                <h3>Mikolaj here.</h3>I am 21 years old student of IT with a head full of ideas. I create ramarkable
+                interfaces
+                with passion and I always look for better design, no matter what am I looking at. In the future I would
+                love to work as frond-end developer.
+                <br><br>I study in Politechnika Krakowska on 2nd year - only on weekends.
+                <br><br>I work with Photoshop, XD and learning HTML, CSS, Javascript, C++ and C.
+            </div>
         </div>
         <div class="pages">
-            <div class="pages__close">close me</div>
+            <button class="pages__close">close me</button>
             <div class="pages__box">
                 <div class="pages__item">
-                    <div class="pages__title">Fizjoterapia i masaż, salon</div>
-                    <a class="pages__img">
+                    <h3>Fizjoterapia i masaż, salon</h3>
+                    <a class="pages__img" href="https://aldill.github.io/page-aneta/" target="_blank">
                         <img class="pages__imagesource" src="images/logo_aneta.png">
                     </a>
-                    <div class="pages__description">Strona dla fizjoterapeutki, która prowadzi salon. Obsługa responsywności oraz praktycznie czysty CSS oraz HTML. Bardzo lekka.</div>
+                    <p>Strona dla fizjoterapeutki, która prowadzi salon. Obsługa
+                        responsywności oraz praktycznie czysty CSS oraz HTML. Bardzo lekka.</p>
                 </div>
                 <div class="pages__item">
-                    <div class="pages__title">artStone</div>
+                    <h3>artStone</h3>
                     <div class="pages__img"></div>
-                    <div class="pages__description">Firma, która zajmuje się obrabianiem granitu. Przygotowuje i stawia nagrobki.</div>
+                    <p>Firma, która zajmuje się obrabianiem granitu. Przygotowuje i stawia
+                        nagrobki.</p>
                 </div>
                 <div class="pages__item">
-                    <div class="pages__title">janicka</div>
+                    <h3>janicka</h3>
                     <div class="pages__img">
-                        <img class="pages__imagesource--janicka" src="images/janicka.png">
+                        <img class="pages__imagesource pages__imagesource--janicka" src="images/janicka.svg">
                     </div>
-                    <div class="pages__description">Blog for photographer. Working on Wordpress.</div>
+                    <p>Blog for photographer. Working on Wordpress.</p>
                 </div>
             </div>
 
         </div>
+
     </main>
-    <footer></footer>
-
-
-    <script>
-    document.getElementsByClassName("box__item--top")[0].addEventListener("click", function () {
-            document.getElementsByClassName("about")[0].style.right = "0";
-        });
-
-        document.getElementsByClassName("about__close")[0].addEventListener("click", function () {
-            document.getElementsByClassName("about")[0].style.right = "-20vw";
-        })
-
-        document.getElementsByClassName("box__item--center")[0].addEventListener("click", function () {
-            document.getElementsByClassName("pages")[0].style.bottom = "0";
-        })
-
-        document.getElementsByClassName("pages__close")[0].addEventListener("click", function () {
-            document.getElementsByClassName("pages")[0].style.bottom = "-75vh";
-        })</script>
-
+    <footer class='footer'>
+        Done with passion, 2020 &copy; Mikołaj Sobiegraj
+    </footer>
+    <script src="js/js.js" type="text/javascript"></script>
 </body>
-
-
-
-
 
 </html>
