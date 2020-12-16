@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const text = [
   "<div class=\"header__text>\"",
   "\"Hello, Mikołaj here.\"",
-  "... // I need to find a job.",
   "</div>"
 ];
 const headerElement = document.querySelector(".header__text");
